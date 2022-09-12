@@ -83,3 +83,4 @@ class CIFAR10DataModule(LightningDataModule):
             pin_memory=self.hparams.pin_memory,
             shuffle=False,
         )
+		
