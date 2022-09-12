@@ -45,4 +45,3 @@ class Predictor(BasePredictor):
         }
 
         return output
-		
