@@ -2,11 +2,10 @@
 
 # Train on Docker and Predict on cog using Pytorch ligtning and Hydra Template
 
-This repository is build using template from https://github.com/ashleve/lightning-hydra-template.
+This repository is build using template from https://github.com/ashleve/lightning-hydra-template.<br>
 
 Docker images are built using Makefile and CIFAR10 images are trained on Docker using Pytorch lighning, timm and hydra template.
 Prediction on any image is done using cog by integrating timm.
-
 
 </div>
 
@@ -18,12 +17,13 @@ Prediction on any image is done using cog by integrating timm.
 
 make build
 
-**How to train:**
+**How to train:** 
+
 docker run -v `pwd`:/workspace/project cifar10_emlo python3 src/train.py experiment=cifar
 
-**How to predict:**
-cog predict image=<Image File>
+**How to predict using cog:**
 
+make predict image=<Image File>
 
 
 <br>
