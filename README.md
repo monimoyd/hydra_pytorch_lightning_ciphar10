@@ -26,6 +26,9 @@ docker run -v `pwd`:/workspace/project cifar10_emlo python3 src/train.py experim
 
 make predict image=\<Image File\>
 
+Example:
+make predict image=input.jpg
+
 
 <br>
 
