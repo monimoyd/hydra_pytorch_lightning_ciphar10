@@ -31,8 +31,20 @@ test-full: ## Run all tests
 train: ## Train the model
 	python src/train.py
 
+predict: ## Predict a image using cog on pretrained model
+ifeq ("$(wildcard $(image))","")
+	@echo File: $(image) does not exit
+else
+	@echo Performing Prediction for file: $(image)
+	cog predict -i image=@$(image)
+endif 
+
 build:
+	@echo "Building Docker Image for training"
 	docker build -t ${IMAGE_NAME} .
+	@echo "Downloading cog .."
+	sudo curl -o /usr/local/bin/cog -L https://github.com/replicate/cog/releases/latest/download/cog_`uname -s`_`uname -m`
+	sudo chmod +x /usr/local/bin/cog
 
 debug: ## Enter debugging mode with pdb
 	#
