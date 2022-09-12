@@ -20,7 +20,7 @@ make build
 
 **How to train:** 
 
-docker run -v `pwd`:/workspace/project cifar10_emlo python3 src/train.py experiment=cifar
+docker run -v \`pwd\`:/workspace/project cifar10_emlo python3 src/train.py experiment=cifar
 
 **How to predict using cog:**
 
