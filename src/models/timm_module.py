@@ -110,3 +110,4 @@ class TIMMLitModule(LightningModule):
         return {
             "optimizer": self.hparams.optimizer(params=self.parameters()),
         }
+		
