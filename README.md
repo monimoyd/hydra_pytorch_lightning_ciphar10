@@ -23,7 +23,7 @@ docker run -v `pwd`:/workspace/project cifar10_emlo python3 src/train.py experim
 
 **How to predict using cog:**
 
-make predict image=<Image File>
+make predict image=\<Image File\>
 
 
 <br>
