@@ -29,6 +29,9 @@ make predict image=\<Image File\>
 Example:
 make predict image=input.jpg
 
+**How to tune parameters of cifar10 using resnet**
+
+python3 src/train.py -m experiment=cifar hparams_search=cifar10_optuna
 
 <br>
 
