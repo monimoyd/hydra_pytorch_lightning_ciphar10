@@ -1,22 +1,16 @@
-FROM python:3.9.13-slim
+FROM zironycho/pytorch:1120-cpu-py38
 
-# Basic setup
-RUN apt update
-RUN apt install -y \
-    build-essential \
-    git \
-    curl \
-    ca-certificates \
-    wget \
-    && rm -rf /var/lib/apt/lists
+ENV GRADIO_SERVER_PORT 7860
 
-# Set working directory
-WORKDIR /workspace/project
+COPY ./model.script.pt.tar.gz .
+COPY src/demo.py .
 
-# Install requirements
-COPY requirements.txt ./
+COPY requirements.txt .
 
-RUN pip install --no-cache-dir -r requirements.txt \
-    && rm requirements.txt
+RUN pip install -r requirements.txt \
+    && rm -rf /root/.cache/pip
 
-# COPY . .
+
+EXPOSE 7860
+
+CMD ["python", "demo.py"]
