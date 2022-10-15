@@ -1,4 +1,28 @@
 <div>
+# Build Gradio inference app
+
+## Step1:
+Train Model on Colab for 10 epochs and download scripted model model.script.pt and create a tar.gz file named model.script.pt.tar.gz
+
+## Step2:
+Build docker image using command below (inference code is in src/demo.py):
+
+docker build -t timm-gradio-cifar10
+
+## Step3:
+Start gradio app by running docker image at port 7860
+
+docker run -p 7860:7860 timm-gradio-cifar10
+
+## Step4:
+Push the docker image to dockerhub
+
+docker login
+docker image tag timm-gradio-cifar10 monimoyp/timm-gradio-cifar10:latest
+ocker image push monimoyp/timm-gradio-cifar10:latest
+
+
+
 
 # Train on Docker and Predict on cog using Pytorch ligtning and Hydra Template
 
