@@ -10,9 +10,9 @@ Build docker image using command below (inference code is in src/demo.py):
 docker build -t timm-gradio-cifar10
 
 ## Step3:
-Start gradio app by running docker image at port 7860
+Start gradio app by running docker image at port 8080
 
-docker run -p 7860:7860 timm-gradio-cifar10
+docker run -p 8080:7860 timm-gradio-cifar10
 
 ## Step4:
 Push the docker image to dockerhub
