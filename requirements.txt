@@ -1,6 +1,6 @@
 torchvision>=0.11.0
 pytorch-lightning==1.7.1
-torchmetrics==0.9.3
+torchmetrics==0.11.0
 hydra-core==1.2.0
 timm==0.6.7
 pyrootutils     # standardizing the project root setup
