@@ -7,7 +7,7 @@ pyrootutils     # standardizing the project root setup
 pre-commit      # hooks for applying linters on commit
 rich            # beautiful text formatting in terminal
 pytest          # tests
-gradio==3.3.1
+gradio==3.20.1
 hydra-colorlog==1.2.0
 hydra-optuna-sweeper==1.2.0
 fairscale==0.4.12
